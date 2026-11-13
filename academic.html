@@ -1,0 +1,528 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>My Academic Planner</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   ORIGINAL HEADER DESIGN
+========================= */
+
+header {
+    background: linear-gradient(
+        to right,
+        #061B49,
+        #155EEF,
+        #62C5FF
+    );
+
+    height: 45px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fa-graduation-cap {
+    color: white;
+    display: flex;
+    font-size: 45px;
+    padding: 15px;
+    position: relative;
+    top: -15px;
+}
+
+.name {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(
+        to right,
+        #FFFFFF 10%,
+        #F0F7FF 45%,
+        #B9D9FF 5%,
+        #155EEF 10%
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    position: relative;
+    top: -75px;
+    right: -80px;
+}
+
+.port {
+    position: relative;
+    top: -132px;
+    left: 1250px;
+
+    color: white;
+
+    background: linear-gradient(
+        to left,
+        #061B49,
+        #155EEF,
+        #62C5FF
+    );
+
+    border: 3px solid blue;
+    border-radius: 12px;
+
+    width: 180px;
+    height: 40px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    position: relative;
+    top: -197px;
+    left: 1440px;
+
+    font-size: 35px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #061B49;
+}
+
+.fa-bars {
+    font-size: 80px;
+}
+
+#menulinks {
+    display: none;
+    position: relative;
+    left: 1300px;
+    top: -230px;
+    font-size: medium;
+    border: none;
+    margin: 20px;
+    padding: 20px;
+    width: 150px;
+    z-index: 1000;
+}
+
+#menulinks a {
+    display: block;
+    color: white;
+    background-color: navy;
+    border: 1px solid navy;
+    padding: 5px;
+    margin: 2px 0;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#menulinks a:hover {
+    background-color: #155EEF;
+}
+
+#menulinks.show {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   ACADEMIC PLANNER
+========================= */
+
+#academic-planner {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: 40px 20px;
+    background: #f4f7fc;
+    color: #061B49;
+}
+
+.academic-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.academic-heading h1 {
+    font-size: 32px;
+    color: #061B49;
+}
+
+.academic-heading p {
+    color: #555;
+    font-size: 16px;
+}
+
+
+/* TASK INPUT BOX */
+
+.planner-box {
+    background: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.planner-box h2 {
+    margin-bottom: 20px;
+}
+
+.planner-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #061B49;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.planner-box button {
+    background: #061B49;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.planner-box button:hover {
+    background: #155EEF;
+}
+
+
+/* TASK LIST */
+
+.task-section {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.task-section h2 {
+    margin-bottom: 20px;
+}
+
+.academic-task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: white;
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.academic-task h3 {
+    color: #061B49;
+}
+
+.academic-task p {
+    color: #555;
+}
+
+.academic-task button {
+    background: #155EEF;
+    color: white;
+    padding: 9px 13px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.academic-task button:last-child {
+    background: #c62828;
+}
+
+.academic-task.completed h3 {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.empty-message {
+    text-align: center;
+    color: #777;
+}
+
+
+/* =========================
+   MOBILE SCREEN
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    .academic-heading h1 {
+        font-size: 25px;
+    }
+
+    .academic-task {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- ORIGINAL HEADER -->
+
+<header class="my header">
+
+    <i class="fa-solid fa-graduation-cap"></i>
+
+    <h4 class="name">Ohakosim Emmanuel</h4>
+
+    <h2 class="port">My Portfolio</h2>
+
+    <button class="btn" onclick="togglemenu()">☰</button>
+
+    <nav id="menulinks">
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About Me</a>
+
+        <a href="academic.html">Academic Planner</a>
+
+        <a href="projects.html">My Projects</a>
+
+        <a href="contact.html">Contact Me</a>
+
+    </nav>
+
+</header>
+
+
+<!-- ACADEMIC PLANNER -->
+
+<section id="academic-planner">
+
+    <div class="academic-heading">
+
+        <h1>My Academic Planner</h1>
+
+        <p>
+            Organize your studies, assignments and academic activities.
+        </p>
+
+    </div>
+
+
+    <!-- ADD TASK -->
+
+    <div class="planner-box">
+
+        <h2>Add New Task</h2>
+
+        <input
+            type="text"
+            id="taskName"
+            placeholder="Enter your academic task"
+        >
+
+        <input
+            type="date"
+            id="taskDate"
+        >
+
+        <button onclick="addTask()">
+            Add Task +
+        </button>
+
+    </div>
+
+
+    <!-- TASK LIST -->
+
+    <div class="task-section">
+
+        <h2>My Academic Tasks</h2>
+
+        <div id="taskList">
+
+            <p class="empty-message">
+                No tasks added yet.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+/* MENU FUNCTION */
+
+function togglemenu() {
+
+    document
+        .getElementById("menulinks")
+        .classList.toggle("show");
+
+}
+
+
+/* ADD ACADEMIC TASK */
+
+function addTask() {
+
+    let taskName =
+        document.getElementById("taskName").value.trim();
+
+    let taskDate =
+        document.getElementById("taskDate").value;
+
+    if (taskName === "" || taskDate === "") {
+
+        alert("Please enter a task and deadline.");
+
+        return;
+
+    }
+
+    let taskList =
+        document.getElementById("taskList");
+
+    let emptyMessage =
+        taskList.querySelector(".empty-message");
+
+    if (emptyMessage) {
+
+        emptyMessage.remove();
+
+    }
+
+
+    let task = document.createElement("div");
+
+    task.className = "academic-task";
+
+
+    let details = document.createElement("div");
+
+    let title = document.createElement("h3");
+
+    title.textContent = taskName;
+
+    let date = document.createElement("p");
+
+    date.textContent = "Deadline: " + taskDate;
+
+    details.appendChild(title);
+
+    details.appendChild(date);
+
+
+    /* COMPLETED BUTTON */
+
+    let completeButton =
+        document.createElement("button");
+
+    completeButton.textContent = "Completed";
+
+    completeButton.onclick = function() {
+
+        task.classList.toggle("completed");
+
+        completeButton.textContent =
+            task.classList.contains("completed")
+            ? "Undo"
+            : "Completed";
+
+    };
+
+
+    /* DELETE BUTTON */
+
+    let deleteButton =
+        document.createElement("button");
+
+    deleteButton.textContent = "Delete";
+
+    deleteButton.onclick = function() {
+
+        task.remove();
+
+        if (taskList.children.length === 0) {
+
+            taskList.innerHTML =
+                '<p class="empty-message">No tasks added yet.</p>';
+
+        }
+
+    };
+
+
+    task.appendChild(details);
+
+    task.appendChild(completeButton);
+
+    task.appendChild(deleteButton);
+
+    taskList.appendChild(task);
+
+
+    /* CLEAR INPUTS */
+
+    document.getElementById("taskName").value = "";
+
+    document.getElementById("taskDate").value = "";
+
+}
+
+</script>
+
+</body>
+</html>

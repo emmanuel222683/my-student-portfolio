@@ -1,0 +1,48 @@
+e<!DOCTYPE html>
+<html lang="english">
+<head>
+    <title>MY student portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<header class="my header">
+    <i  class="fa-solid fa-graduation-cap"></i>
+    <h4 class="name">Ohakosim Emmanuel</h4> <h2 class="port">My Portofolio</h2>
+    <button class="btn" onclick="togglemenu()">☰ </button>
+    <nav id="menulinks" >
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="academic.html">Academic Planner</a>
+    <a href="projects.html">My Projects</a>
+    <a href="contact.html">Contact Me</a>
+</nav>
+</header>
+<body>
+    <h1 class="tomy">welcome to my portfolio</h1>
+    <h1 class="names">HI, I'm<br><span class="oha">Ohakosim Emmanuel Osinachi</span></h1>
+    <h2 class="soft">Emerging Software Engineer.<span class="miva">Miva Open University</span></h2>
+   <div class="about"> <p><h3> I am an aspiring Software Engineer passionate about technology,<br> innovation, and problem-solving.<br>
+         I enjoy building creative digital solutions while continuously<br> learning and growing my technical skills.</h3></p>
+   </div>
+     <img class="image" src="image.jpeg" width="500px" alt="image.jpeg">
+     <div class="homebtn">
+
+    <a href="about.html" class="discover">
+        <i class="fa-solid fa-address-book"></i>
+        Discover more
+    </a>
+
+    <a href="projects.html" class="view">
+        <i class="fa-solid fa-folder-open"></i>
+        View Project
+    </a>
+
+</div>
+<script>function togglemenu() {
+    document.getElementById("menulinks").classList.toggle("show");
+}</script>
+
+</body>
+</html>

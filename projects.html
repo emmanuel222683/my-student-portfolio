@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+    <title>MY student portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="projects.css">
+<header class="my header">
+    <i  class="fa-solid fa-graduation-cap"></i>
+    <h4 class="name">Ohakosim Emmanuel</h4> <h2 class="port">My Portofolio</h2>
+    <button class="btn" onclick="togglemenu()">☰ </button>
+    <nav id="menulinks" >
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="academic.html">Academic Planner</a>
+    <a href="projects.html">My Projects</a>
+    <a href="contact.html">Contact Me</a>
+</nav>
+</header>
+<!-- MY PROJECTS SECTION -->
+
+<section id="projects">
+
+    <div class="project-heading">
+        <h2>My Projects</h2>
+        <p>Some of my works</p>
+    </div>
+
+    <div class="project-container">
+
+        <!-- PROJECT 1 -->
+        <div class="project-card">
+
+            <img src="project1.jpg" alt="Portfolio Website">
+
+            <h3>Personal Portfolio Website</h3>
+
+            <p>
+                A modern portfolio website to showcase
+                my skills and achievements.
+            </p>
+
+            <button onclick="viewProject(0)">
+                View Project →
+            </button>
+
+        </div>
+
+
+        <!-- PROJECT 2 -->
+        <div class="project-card">
+
+            <img src="project2.jpg" alt="Academic Planner">
+
+            <h3>Academic Planner</h3>
+
+            <p>
+                An interactive planner to manage
+                my academic tasks.
+            </p>
+
+            <button onclick="viewProject(1)">
+                View Project →
+            </button>
+
+        </div>
+
+
+        <!-- PROJECT 3 -->
+        <div class="project-card">
+
+            <img src="project3.jpg" alt="Online Store">
+
+            <h3>Online Store Design</h3>
+
+            <p>
+                A simple e-commerce website concept.
+            </p>
+
+            <button onclick="viewProject(2)">
+                View Project →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECT POPUP -->
+
+<div class="project-modal" id="projectModal">
+
+    <div class="modal-content">
+
+        <button class="close-modal" onclick="closeProject()">
+            &times;
+        </button>
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalDescription"></p>
+
+    </div>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+const projects = [
+
+    {
+        title: "Personal Portfolio Website",
+        description: "A modern personal portfolio website built with HTML and CSS to showcase my background, skills, projects and achievements."
+    },
+
+    {
+        title: "Academic Planner",
+        description: "An interactive academic planner designed to help students organize their studies, manage tasks and track their academic progress."
+    },
+
+    {
+        title: "Online Store Design",
+        description: "A modern e-commerce website concept designed to display products and provide a simple online shopping experience."
+    }
+
+];
+
+
+function viewProject(index) {
+
+    document.getElementById("modalTitle").textContent =
+        projects[index].title;
+
+    document.getElementById("modalDescription").textContent =
+        projects[index].description;
+
+    document.getElementById("projectModal").classList.add("active");
+
+}
+
+
+function closeProject() {
+
+    document.getElementById("projectModal").classList.remove("active");
+
+}
+
+
+document.getElementById("projectModal").addEventListener("click", function(event) {
+
+    if (event.target === this) {
+        closeProject();
+    }
+
+});
+function togglemenu() {
+    document.getElementById("menulinks").classList.toggle("show");
+}
+
+
+</script>
+

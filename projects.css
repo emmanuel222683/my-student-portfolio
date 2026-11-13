@@ -1,0 +1,309 @@
+
+/* ==============================
+   GENERAL PAGE SETTINGS
+============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+/* ==============================
+   ORIGINAL HEADER DESIGN
+============================== */
+
+header {
+    background: linear-gradient(
+        to right,
+        #061B49,
+        #155EEF,
+        #62C5FF
+    );
+
+    height: 45px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* GRADUATION LOGO */
+
+.fa-graduation-cap {
+    color: white;
+    display: flex;
+    font-size: 45px;
+    padding: 15px;
+    position: relative;
+    top: -15px;
+}
+
+
+/* YOUR NAME */
+
+.name {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(
+        to right,
+        #FFFFFF 10%,
+        #F0F7FF 45%,
+        #B9D9FF 5%,
+        #155EEF 10%
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    position: relative;
+    top: -75px;
+    right: -80px;
+}
+
+
+/* PORTFOLIO TITLE */
+
+.port {
+    position: relative;
+    top: -132px;
+    left: 1250px;
+
+    color: white;
+
+    background: linear-gradient(
+        to left,
+        #061B49,
+        #155EEF,
+        #62C5FF
+    );
+
+    border: 3px solid blue;
+    border-radius: 12px;
+
+    width: 180px;
+    height: 40px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* MENU BUTTON */
+
+.btn {
+    position: relative;
+    top: -197px;
+    left: 1440px;
+
+    font-size: 35px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #061B49;
+}
+
+.fa-bars {
+    font-size: 80px;
+}
+
+
+/* NAVIGATION LINKS */
+
+#menulinks {
+    display: none;
+    position: relative;
+    left: 1300px;
+    top: -230px;
+    font-size: medium;
+    border: none;
+    margin: 20px;
+    padding: 20px;
+    width: 150px;
+    z-index: 1000;
+}
+
+#menulinks a {
+    display: block;
+    color: white;
+    background-color: navy;
+    border: 1px solid navy;
+    padding: 5px;
+    margin: 2px 0;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#menulinks a:hover {
+    background-color: #155EEF;
+}
+
+#menulinks.show {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ==============================
+   MY PROJECTS SECTION
+============================== */
+
+#projects {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    background: #f4f7fc;
+    color: #061B49;
+    padding: 40px 20px;
+}
+
+#projects .project-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#projects .project-heading h2 {
+    font-size: 35px;
+    color: #061B49;
+}
+
+#projects .project-heading p {
+    color: #555;
+}
+
+#projects .project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 100%;
+    max-width: 100%;
+}
+
+#projects .project-card {
+    width: 300px;
+    max-width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#projects .project-card img {
+    width: 100%;
+    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#projects .project-card h3 {
+    color: #061B49;
+}
+
+#projects .project-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+#projects .project-card button {
+    background: #061B49;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#projects .project-card button:hover {
+    background: #155EEF;
+}
+
+
+/* PROJECT POPUP */
+
+#projects .project-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+#projects .project-modal.active {
+    display: flex;
+}
+
+#projects .modal-content {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+}
+
+#projects .close-modal {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* ==============================
+   STOP HORIZONTAL PAGE MOVEMENT
+============================== */
+
+img {
+    max-width: 100%;
+}
+
+
+/* ==============================
+   SMALL SCREEN PROTECTION
+============================== */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        width: 100%;
+    }
+
+    #projects .project-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+}

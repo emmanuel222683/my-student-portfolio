@@ -1,0 +1,208 @@
+body{background-image: url("what.jpeg");background-repeat: no-repeat;background-size: cover;background-attachment: fixed;}
+header{background-attachment: fixed ;background-size:cover;background: linear-gradient(
+    to right,
+    #061B49,
+    #155EEF,
+    #62C5FF
+);height: 45px; margin: 0;padding: 0;box-sizing: border-box; }
+.fa-graduation-cap{color:white;display:flex;font-size: 45px;padding: 15px;position: relative;top: -15px;}
+.name{font-family: Arial, Helvetica, sans-serif;background: linear-gradient(
+    to right,
+    #FFFFFF 10%,
+    #F0F7FF 45%,
+    #B9D9FF 5%,
+    #155EEF 10%
+);background-clip:text;    -webkit-background-clip: text;
+    color: transparent;
+position: relative;top:-75px;right: -80px}
+.btn{position: relative;top:-170px;left: 1460px;}
+.port{position: relative;top: -125px;left: 100px;color:white;height: 20px;}
+.port {
+    position: relative;
+    top: -132px;
+    left: 1250px;
+
+    color: white;
+    background: linear-gradient(
+    to left,
+    #061B49,
+    #155EEF,
+    #62C5FF
+);
+
+    border: 3px solid blue;
+    border-radius: 12px;
+
+    width: 180px;
+    height: 40px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{position: relative;top: -197px;
+    left: 1440px;font-size: 35px;
+background:transparent;
+border:none;
+cursor: pointer;color:#061B49}
+.fa-bars {
+    font-size: 80px;
+}
+    
+    #menulinks {
+    display: none;position: relative;left:1300px;top:-230px;font: size 200px;;
+    font-size: medium;border: none; margin: 20px;padding: 20px;width: 150px;
+ }
+ #menulinks a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+#menulinks a {
+    display: block;
+    color: white;
+    background-color: navy;
+    border: 1px solid navy;
+    padding: 5px;
+    margin: 2px 0;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#menulinks.show {
+    display: flex;
+    flex-direction: column;}
+* {
+    box-sizing: border-box;
+}
+.a{font-weight: 1200;font-size: 60px;position: relative;right:-50px;top:-30px;}
+.b{position:relative;top:-80px;right:-50px;word-spacing: 3px;}
+ .fa-minus{color:#061B49;position: relative;top: 100px;right:-70px;font-size: 20px;}
+ .fa-minus {
+    transform: scaleX(4.5);
+}
+.c{color:blue;}
+
+/* ABOUT ME PAGE BODY */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("what.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ABOUT ME HEADING */
+
+.a {
+    color: #061B49;
+    font-size: 42px;
+    font-weight: 900;
+    margin-left: 50px;
+    padding-top: 25px;
+    letter-spacing: 2px;
+}
+
+.b {
+    color: #155EEF;
+    font-size: 21px;
+    margin-left: 55px;
+    margin-top: -15px;
+}
+
+/* SMALL DECORATIVE LINE */
+
+.fa-minus {
+    color: #155EEF;
+    font-size: 35px;
+    margin-left: 55px;
+}
+
+/* INFORMATION SECTIONS */
+
+.c,
+.fa-bullseye,
+.fa-gear,
+.fa-heart {
+    color: #155EEF;
+    font-size: 30px;
+    margin-left: 55px;
+    margin-top: 15px;
+}
+
+/* SECTION HEADINGS */
+
+.edu,
+.car,
+.tec,
+body > p h1 {
+    color: #061B49;
+    font-size: 22px;
+    font-weight: 800;
+    margin-left: 55px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+/* SECTION DESCRIPTIONS */
+
+body > p h3,
+body > h3 {
+    color: #173B72;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-left: 55px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        background-position: center;
+        background-attachment: scroll;
+    }
+
+    .a {
+        font-size: 32px;
+        margin-left: 20px;
+    }
+
+    .b {
+        font-size: 18px;
+        margin-left: 22px;
+    }
+
+    .fa-minus,
+    .c,
+    .fa-bullseye,
+    .fa-gear,
+    .fa-heart {
+        margin-left: 22px;
+    }
+
+    .edu,
+    .car,
+    .tec,
+    body > p h1 {
+        font-size: 19px;
+        margin-left: 22px;
+    }
+
+    body > p h3,
+    body > h3 {
+        font-size: 14px;
+        margin-left: 22px;
+    }
+}
