@@ -3,8 +3,17 @@ header{background: linear-gradient(
     #061B49,
     #155EEF,
     #62C5FF
-);height: 45px; margin: 0;padding: 0;box-sizing: border-box; }
+);height: 45px; margin: 0;padding: 0;box-sizing: border-box;}
 .fa-graduation-cap{color:white;display:flex;font-size: 45px;padding: 15px;position: relative;top: -15px;}
+header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 9999 !important;
+}
 .name{font-family: Arial, Helvetica, sans-serif;background: linear-gradient(
     to right,
     #FFFFFF 10%,
@@ -14,12 +23,17 @@ header{background: linear-gradient(
 );background-clip:text;    -webkit-background-clip: text;
     color: transparent;
 position: relative;top:-75px;right: -80px}
-.btn{position: relative;top:-170px;left: 1460px;}
-.port{position: relative;top: -125px;left: 100px;color:white;height: 20px;}
+.btn{
+    position:absolute !important;
+    top:-3px !important;
+    right: 37px !important;
+}
+.port
+{position: absolute !important;
+    top: -18px !important;
+    right: 90px !important;color:white;height: 20px;}
 .port {
-    position: relative;
-    top: -132px;
-    left: 1250px;
+    
 
     color: white;
     background: linear-gradient(
@@ -51,7 +65,7 @@ cursor: pointer;color:#061B49}
 }
     
     #menulinks {
-    display: none;position: relative;left:1300px;top:-230px;font: size 200px;;
+    display: none;position: relative;left:1300px;top:-90px;font: size 200px;;
     font-size: medium;border: none; margin: 20px;padding: 20px;width: 150px;
  }
  #menulinks a {
@@ -75,17 +89,32 @@ cursor: pointer;color:#061B49}
 #menulinks.show {
     display: flex;
     flex-direction: column;}
-* {
-    box-sizing: border-box;
+/* Applies to all screen sizes */
+body {
+    background-image: url("emma.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    min-height: 105vh;
+    margin: 0;
+    overflow-x: hidden;
+    max-height: 100vh;
+    overflow-y: hidden;
 }
 
-img {
-    max-width: 80%;
-    height: auto;
-    position: fixed;}
-body{background-image:url(back.png);
-        margin: 0;background-attachment: fixed;
-        background-repeat: no-repeat;background-size: cover;height:  500PX;overflow: hidden;}
+/* Mobile screen */
+@media screen and (max-width: 768px) {
+
+    body {
+        background-size: cover !important;
+        background-position: center !important;
+    }
+    
+
+}
+
+
     .tomy {
     position: relative;
     right: -750px;
@@ -110,8 +139,8 @@ body{background-image:url(back.png);
     -webkit-text-fill-color: transparent;
 
     letter-spacing: 2px;
-    word-spacing: 5px;
-}
+    word-spacing: 5px;}
+
     .names{position:relative;right:-700px;top:170px;color:white;letter-spacing: 2px;word-spacing: 7px;}
     .about{position: relative;left:700px ;top:170px;color: white;word-spacing: 5px;letter-spacing: 1px;}
     .oha {
@@ -135,7 +164,7 @@ body{background-image:url(back.png);
     -webkit-text-fill-color: transparent;}
     .image {
     position: relative;
-    top: -240px;
+    top: -290px;
     width: 730px;
     height: 800px;
     left: -80px;
